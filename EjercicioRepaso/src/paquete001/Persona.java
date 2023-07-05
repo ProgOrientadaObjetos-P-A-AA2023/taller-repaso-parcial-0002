@@ -58,4 +58,10 @@ public class Persona {
         ciudad = ci;
     }
 
+ @Override
+    public String toString(){
+        return String.format("Nombre: %s - Apellido %s - Edad %d - Cedula %s", 
+                obtenerNombre(), obtenerApellido(), obtenerEdad(),obtenerCedula());
+    }
+
 }

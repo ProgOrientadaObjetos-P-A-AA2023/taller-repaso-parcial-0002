@@ -14,6 +14,7 @@ public class PagoAguaPotable extends Pago {
         tipo = t;
     }
 
+
     public double obtenerTarifaFija() {
         return tarifaFija;
     }
@@ -57,6 +58,10 @@ public class PagoAguaPotable extends Pago {
 
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         if (tipo.equals("comercial")) {
@@ -67,5 +72,7 @@ public class PagoAguaPotable extends Pago {
         }
 
     }
+
+
 
 }
