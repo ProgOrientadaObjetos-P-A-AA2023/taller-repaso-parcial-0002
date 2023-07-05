@@ -27,4 +27,9 @@ public class PagoAguaPotable {
         
         return pago;
     }
+    @Override
+    public String toString(){
+        return String.format("Nombre: %s - Apellido %s - Edad %d", 
+                obtenerNombre(), obtenerApellido(), obternerEdad());
+    }
 }
