@@ -1,22 +1,50 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package paquete004;
 
-import paquete001.Persona;
+public class PagoTelefonoConvencional extends Pago {
 
-/**
- *
- * @author reroes
- */
-public class PagoTelefonoConvencional {
-    
-    public double calcularPago(){
-        double tarifa = 6.20;
-        double minutosConsumidos = 100;
-        double costoMinuto = 0.2;
-        double pago = tarifa + (minutosConsumidos * costoMinuto);
-        return pago;
+    double tarifa;
+    double minutosConsumidos;
+    double costoMinuto;
+
+    public PagoTelefonoConvencional(double t, double mC, double cM) {
+        tarifa = t;
+        minutosConsumidos = mC;
+        costoMinuto = cM;
     }
+
+    public double obtenerTarifa() {
+        return tarifa;
+    }
+
+    public void establecerTarifa(double t) {
+        tarifa = t;
+    }
+
+    public double obtenerMinutosConsumidos() {
+        return minutosConsumidos;
+    }
+
+    public void establecerMinutosConsumidos(double mC) {
+        minutosConsumidos = mC;
+    }
+
+    public double obtenerCostoMinuto() {
+        return costoMinuto;
+    }
+
+    public void establecerCostoMinuto(double cM) {
+        costoMinuto = cM;
+    }
+
+    @Override
+    public void calcularValorPago() {
+        pagos = tarifa + (minutosConsumidos * costoMinuto);
+    }
+
+    @Override
+    public String toString() {
+        return "El valor a pagar del Tel+efono Convencional es de: " + pagos;
+
+    }
+
 }

@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package paquete002;
 
-/**
- *
- * @author reroes
- */
 public class Ciudad {
+
     String nombreCiudad;
+
+    public Ciudad(String nC) {
+        nombreCiudad = nC;
+    }
+
+    public String obtenerNombreCiudad() {
+        return nombreCiudad;
+    }
+
+    public void establecerNombreCiudad(String nC) {
+        nombreCiudad = nC;
+    }
+
+    @Override
+    public String toString() {
+        String mensaje;
+
+        mensaje = String.format("Nombre de Ciudad: %s\n", nombreCiudad);
+
+        return mensaje;
+    }
+
 }

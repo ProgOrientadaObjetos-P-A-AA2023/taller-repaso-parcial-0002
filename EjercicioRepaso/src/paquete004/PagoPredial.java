@@ -1,21 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package paquete004;
 
-import paquete001.Persona;
-import paquete002.Propiedad;
+public class PagoPredial extends Pago {
 
-/**
- *
- * @author reroes
- */
-public class PagoPredial {
-    public double calcularPago(){
-        double valorPropiedad = 56000;
-        double porcentaje = 10;
-        double pago = valorPropiedad - ((valorPropiedad*porcentaje)/100);
-        return pago;
+    double valorPropiedad;
+    private double porcentaje;
+
+    public PagoPredial(double vP, double p) {
+        valorPropiedad = vP;
+        porcentaje = p;
     }
+
+    public double obtenerValorPropiedad() {
+        return valorPropiedad;
+    }
+
+    public void establecerValorPropiedad(double vP) {
+        valorPropiedad = vP;
+    }
+
+    public double obtenerPorcentaje() {
+        return porcentaje;
+    }
+
+    public void establecerPorcentaje(double p) {
+        porcentaje = p;
+    }
+
+    @Override
+    public void calcularValorPago() {
+        pagos = valorPropiedad - ((valorPropiedad * porcentaje) / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "El valor a pagar del Agua Potable Casa es de: " + pagos;
+
+    }
+
 }
